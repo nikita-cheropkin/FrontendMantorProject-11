@@ -49,8 +49,8 @@ console.log(data.length);
 function getData() {
     if (currentTimeFrame === "daily") {
         for (let i = 0; i < data.length; i++) {
-            let currentTextHour = hoursTexts[i];
-            let currentWeekText = lastweekTexts[i];
+            const currentTextHour = hoursTexts[i];
+            const currentWeekText = lastweekTexts[i];
 
             currentTextHour.textContent = data[i].timeframes.daily.current + "hrs";
             currentWeekText.textContent = "Yesterday - " + data[i].timeframes.daily.previous + "hrs";
@@ -59,8 +59,8 @@ function getData() {
 
     if (currentTimeFrame === "weekly") {
         for (let i = 0; i < data.length; i++) {
-            let currentTextHour = hoursTexts[i];
-            let currentWeekText = lastweekTexts[i];
+            const currentTextHour = hoursTexts[i];
+            const currentWeekText = lastweekTexts[i];
 
             currentTextHour.textContent = data[i].timeframes.weekly.current + "hrs";
             currentWeekText.textContent = "Last Week - " + data[i].timeframes.weekly.previous + "hrs";
@@ -69,8 +69,8 @@ function getData() {
 
     if (currentTimeFrame === "monthly") {
         for (let i = 0; i < data.length; i++) {
-            let currentTextHour = hoursTexts[i];
-            let currentWeekText = lastweekTexts[i];
+            const currentTextHour = hoursTexts[i];
+            const currentWeekText = lastweekTexts[i];
 
             currentTextHour.textContent = data[i].timeframes.monthly.current + "hrs";
             currentWeekText.textContent = "Last Month - " + data[i].timeframes.monthly.previous + "hrs";
