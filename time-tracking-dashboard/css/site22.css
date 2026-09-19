@@ -41,7 +41,6 @@ body {
 }
 
 .block {
-    border-color: 15px;
     overflow: hidden;
     color: white;
     background-color: var(--descp-bg);
