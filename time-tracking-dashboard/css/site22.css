@@ -1,0 +1,356 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik";
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../Fonts/Rubik-VariableFont_wght.ttf");
+}
+
+:root {
+    --profile-color: hsl(246, 80%, 60%);
+    --bg-color: hsl(226, 43%, 10%);
+    --descp-bg: hsl(235, 46%, 20%);
+    --work-block: hsl(15, 100%, 70%);
+    --play-block: hsl(195, 74%, 62%);
+    --study-block: hsl(348, 100%, 68%);
+    --exercise-block: hsl(145, 58%, 55%);
+    --social-block: hsl(264, 64%, 52%);
+    --self-care-block: hsl(43, 84%, 65%);
+    --descp-text: hsl(236, 100%, 87%);
+    --active-block: #34397b;
+
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.block {
+    border-color: 15px;
+    overflow: hidden;
+    color: white;
+    background-color: var(--descp-bg);
+    transition: 0.5s;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--profile-color);
+    padding: 30px 30px 120px 30px;
+    border-radius: 15px;
+}
+
+.profile-name {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-info > span {
+    color: var(--descp-text);
+    margin-top: 30px;
+}
+
+.profile-name > span {
+    font-weight: 500;
+    color: var(--descp-text);
+}
+
+.profile-info h1 {
+    display: block;
+    font-weight: 300;
+    font-size: 45px;
+}
+
+.profile-info img {
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.other-info {
+    background-color: var(--descp-bg);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: hsl(236, 100%, 87%);
+}
+
+.other-info span {
+    cursor: pointer;
+    transition: .3s;
+}
+
+.other-info span:hover {
+    color: white;
+}
+
+.active-option {
+    color: white;
+}
+
+.profile-block {
+    grid-row: span 2;
+    border-radius: 15px;
+}
+
+
+.block-hover:hover .content-block {
+    background-color: var(--active-block);
+}
+
+/* ---------------------------------------- */
+
+.work-block {
+    background-color: var(--work-block);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+}
+
+.content-block {
+    background-color: var(--descp-bg);
+    padding: 30px 30px;
+    border-radius: 15px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.block > img {
+    width: 80px;
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    right: 10px;
+}
+
+.work-block > img {
+    width: 90px;
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    right: 10px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content span {
+    font-size: 18px;
+}
+
+.header-content svg {
+    transition: .3s;
+    cursor: pointer;
+    fill: #BBC0FF;
+}
+
+.header-content svg:hover {
+    fill: white;
+}
+
+.last-week {
+    color: var(--descp-text);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.hours {
+    margin-top: 30px;
+    font-size: 50px;
+    font-weight: 300;
+}
+
+/* ---------------------------------------------- */
+
+.play-block {
+    background-color: var(--play-block);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+}
+
+.play-block > img {
+    width: 90px;
+    position: absolute;
+    z-index: 1;
+    top: -10pxpx;
+    right: 10px;
+}
+
+
+/* ---------------------------------------------- */
+
+.study-block {
+    background-color: var(--study-block);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+}
+
+.study-block > img {
+    width: 90px;
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    right: 10px;
+}
+
+
+
+/* ---------------------------------------------- */
+
+.exercise-block {
+    background-color: var(--exercise-block);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+}
+
+.exercise-block > img {
+    width: 90px;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    right: 10px;
+}
+
+
+/* ---------------------------------------------- */
+
+.social-block {
+    background-color: var(--social-block);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+}
+
+.social-block > img {
+    width: 80px;
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    right: 10px;
+}
+
+
+/* ---------------------------------------------- */
+
+.self-care-block {
+    background-color: var(--self-care-block);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+}
+
+.self-care-block > img {
+    width: 80px;
+    position: absolute;
+    z-index: 1;
+    top: -15px;
+    right: 10px;
+}
+
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        height: auto;
+        padding: 20px 0px 0px 0px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        max-width: 350px;
+    }
+
+    .profile-block {
+        grid-row: span 1;
+    }
+    
+    .profile-info {
+        padding-bottom: 30px;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .other-info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .hours {
+        margin-top: 0;
+        font-size: 32px;
+    }
+
+    .last-week {
+        font-size: 14px;
+    }
+
+    .profile-name {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .profile-name h1 {
+        font-size: 24px;
+        display: flex;
+        gap: 5px;
+    }
+}
